@@ -20,15 +20,19 @@ A suspicious event occurring on 2022-05-09 was reported, requiring an examinatio
 
 The first section specifies that the data is to be collected from the `log_in_attempts` table (`SELECT * FROM log_in_attempts`), then the `WHERE` and `OR` operators are used to filter all data from the `login_date` column, displaying entries where the login date equals 2022-05-09 (`WHERE login_date = '2022-05-09'`) or 2022-05-08 (`OR login_date = '2022-05-08';`).
 
-**Retrieve Login Attempts Outside of Mexico**
+## **Retrieve Login Attempts Outside of Mexico**
 
 Based on the login attempt records, it was suspected that a login request did not originate from Mexico. Below is the SQL query I used to filter login attempts that occurred outside of Mexico.
+
+![Alt Text](image6.png)
 
 The first section specifies that the data is to be collected from the `log_in_attempts` table (`SELECT * FROM log_in_attempts`), then the `WHERE`, `NOT`, and `LIKE` operators are used to filter all data where the country does not match "MEX" (`WHERE NOT country LIKE 'MEX%'`). The `%` wildcard is used to represent an unknown string of zero or more characters.
 
 ## **Retrieve Employees in Marketing**
 
 I was assigned to update all computers used by employees in the Marketing department. Below is the SQL query I used to filter for computers used by Marketing employees.
+
+![Alt Text](image5.png)
 
 The first section specifies that the data is to be collected from the `employees` table (`SELECT * FROM employees`), then the `WHERE`, `AND`, and `LIKE` operators are used to filter all data in the `department` column where the value equals "Marketing" (`WHERE department = 'Marketing'`) and to search for office locations that start with "East-" (`AND office LIKE 'East-%'`). The `%` wildcard represents an unknown string of zero or more characters.
 
