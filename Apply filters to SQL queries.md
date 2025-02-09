@@ -8,7 +8,7 @@ The goal of this project is to update and strengthen the organisation’s curren
 
 After receiving a security incident report concerning failed login attempts occurring after business hours (after 18:00), I applied the following SQL query to filter any failed login attempts that matched these conditions.
 
-![Alt Text](https://github.com/Elfonnzo/Apply-Filters-to-SQL-Queries/blob/main/image1.png)
+![Alt Text](image1.png)
 
 The first section specifies that the data is to be collected from the `log_in_attempts` table (`SELECT * FROM log_in_attempts`), then the `WHERE` and `AND` operators are used to filter all data from the `login_time` column, displaying only login attempts past 18:00 (`WHERE login_time > '18:00'`) and those marked as failed in the `success` column (`AND success = 0;`).
 
