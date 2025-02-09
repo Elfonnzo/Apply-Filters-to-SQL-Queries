@@ -8,13 +8,16 @@ The goal of this project is to update and strengthen the organisation’s curren
 
 After receiving a security incident report concerning failed login attempts occurring after business hours (after 18:00), I applied the following SQL query to filter any failed login attempts that matched these conditions.
 
-![Alt Text](image1.png)
+![Alt Text](image3.png)
 
 The first section specifies that the data is to be collected from the `log_in_attempts` table (`SELECT * FROM log_in_attempts`), then the `WHERE` and `AND` operators are used to filter all data from the `login_time` column, displaying only login attempts past 18:00 (`WHERE login_time > '18:00'`) and those marked as failed in the `success` column (`AND success = 0;`).
 
 ## **Retrieve Login Attempts on Specific Dates**
 
-A suspicious event occurring on 2022-05-09 was reported, requiring an examination of any login activity between 2022-05-08 and 2022-05-09. Below is the SQL query I used to filter for login attempts within those dates.  
+A suspicious event occurring on 2022-05-09 was reported, requiring an examination of any login activity between 2022-05-08 and 2022-05-09. Below is the SQL query I used to filter for login attempts within those dates.
+
+![Alt Text](image4.png)
+
 The first section specifies that the data is to be collected from the `log_in_attempts` table (`SELECT * FROM log_in_attempts`), then the `WHERE` and `OR` operators are used to filter all data from the `login_date` column, displaying entries where the login date equals 2022-05-09 (`WHERE login_date = '2022-05-09'`) or 2022-05-08 (`OR login_date = '2022-05-08';`).
 
 **Retrieve Login Attempts Outside of Mexico**
