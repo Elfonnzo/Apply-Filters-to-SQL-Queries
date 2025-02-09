@@ -40,11 +40,15 @@ The first section specifies that the data is to be collected from the `employees
 
 The Finance and Sales department systems also required updates, with different security patches for each, requiring me to filter employees from only these two departments. Below is the SQL query I used.
 
+![Alt Text](image2.png)
+
 The first section specifies that the data is to be collected from the `employees` table (`SELECT * FROM employees`), then the `WHERE`, `LIKE`, and `OR` operators are used to filter data in the `department` column where the value matches "Finance" (`WHERE department LIKE 'Finance'`) or "Sales" (`OR department LIKE 'Sales';`). The `OR` operator was used instead of `AND` to ensure employees from both departments were included.
 
 ## **Retrieve All Employees Not in IT**
 
 My team was required to install an additional update for employees who are **not** in the Information Technology (IT) department. This required filtering employees via the `department` column.
+
+![Alt Text](image1.png)
 
 The first section specifies that the data is to be collected from the `employees` table (`SELECT * FROM employees`), then the `WHERE`, `NOT`, and `LIKE` operators are used to exclude employees in the IT department (`WHERE department NOT LIKE 'Information Technology'`).
 
