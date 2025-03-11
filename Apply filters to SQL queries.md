@@ -1,4 +1,4 @@
-
+# Applying Filters to SQL Queries
 
 # **Project Overview**
 
