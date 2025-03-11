@@ -1,6 +1,6 @@
 # Applying Filters to SQL Queries
 
-# **Project Overview**
+## **Project Overview**
 
 The goal of this project is to update and strengthen the organisation’s current systems by identifying and locating employee devices to ensure they are up to date and secure. This project details the methods used to access and filter SQL queries using the AND, OR, and NOT operators.
 
